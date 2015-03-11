@@ -32,5 +32,5 @@ int				rrb(t_stack **stack_a, t_stack **stack_b);
 ** operations_3
 */
 int				rrr(t_stack **stack_a, t_stack **stack_b);
-void			stack_cpy(t_stack **dest, t_stack *src);
+
 #endif
