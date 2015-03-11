@@ -58,3 +58,16 @@ void			pop_stack(t_stack **head)
 	free(*head);
 	*head = tmp;
 }
+
+
+void			stack_display(t_stack **head)
+{
+	t_stack			*tmp;
+
+	tmp = *head;
+	while ((*tmp)->next != head)
+	{
+		ft_putnbr(tmp->elem);
+		tmp = tmp->next;
+	}
+}
