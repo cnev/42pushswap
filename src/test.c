@@ -13,6 +13,6 @@ int main(void)
 	pushback_stack(&stack1, 7);
 	pushback_stack(&stack1, 1);
 
-	stack_display(head);
+	stack_display(head, 'a');
 	return (0);
 }

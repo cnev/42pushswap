@@ -59,7 +59,6 @@ void			pop_stack(t_stack **head)
 	*head = tmp;
 }
 
-
 void			stack_display(t_stack *head, char id)
 {
 	t_stack			*tmp;
