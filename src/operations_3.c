@@ -1,6 +1,6 @@
-#include "pushswap.h"
+#include "../includes/push_swap.h"
 
-int				rrr(t_stack **stack_a, t_stack **stack_b);
+int				rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	if ((*stack_a && (*stack_a)->prev && *stack_a != (*stack_a)->prev) &&
 		(*stack_b && (*stack_b)->prev && *stack_b != (*stack_b)->prev))

@@ -1,4 +1,4 @@
-#include "pushswap.h"
+#include "../includes/push_swap.h"
 
 int				ra(t_stack **stack_a, t_stack **stack_b)
 {
@@ -11,7 +11,7 @@ int				ra(t_stack **stack_a, t_stack **stack_b)
 	return (0);
 }
 
-int				rb(t_stack **stack_a, t_stack **stack_b);
+int				rb(t_stack **stack_a, t_stack **stack_b)
 {
 	if (*stack_b && (*stack_b)->next && *stack_b != (*stack_b)->next)
 	{
@@ -22,7 +22,7 @@ int				rb(t_stack **stack_a, t_stack **stack_b);
 	return (0);
 }
 
-int				rr(t_stack **stack_a, t_stack **stack_b);
+int				rr(t_stack **stack_a, t_stack **stack_b)
 {
 	if ((*stack_a && (*stack_a)->next && *stack_a != (*stack_a)->next) &&
 		(*stack_b && (*stack_b)->next && *stack_b != (*stack_b)->next))
@@ -46,7 +46,7 @@ int				rra(t_stack **stack_a, t_stack **stack_b)
 	return (0);
 }
 
-int				rrb(t_stack **stack_a, t_stack **stack_b);
+int				rrb(t_stack **stack_a, t_stack **stack_b)
 {
 	if (*stack_b && (*stack_b)->prev && *stack_b != (*stack_b)->prev)
 	{
@@ -56,5 +56,3 @@ int				rrb(t_stack **stack_a, t_stack **stack_b);
 	}
 	return (0);
 }
-int				rra(t_stack **stack_a, t_stack **stack_b);
-int				rrb(t_stack **stack_a, t_stack **stack_b);

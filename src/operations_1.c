@@ -1,4 +1,4 @@
-#include "pushswap.h"
+#include "../includes/push_swap.h"
 
 int				sa(t_stack **stack_a, t_stack **stack_b)
 {
@@ -30,7 +30,7 @@ int				sb(t_stack **stack_a, t_stack **stack_b)
 	return (0);
 }
 
-int				sb(t_stack **stack_a, t_stack **stack_b)
+int				ss(t_stack **stack_a, t_stack **stack_b)
 {
 	int			tmp;
 

@@ -1,4 +1,4 @@
-#include "pushswap.h"
+#include "../includes/push_swap.h"
 
 t_stack			*new_stack(int val)
 {
@@ -65,9 +65,19 @@ void			stack_display(t_stack *head)
 	t_stack			*tmp;
 
 	tmp = head;
+	if (!tmp)
+		return ;
+	if (tmp->next == tmp)
+	{
+		ft_putnbr(tmp->elem);
+		return ;
+	}
 	while (tmp->next != head)
 	{
 		ft_putnbr(tmp->elem);
+		ft_putchar('\n');
 		tmp = tmp->next;
 	}
+	if (tmp != head)
+		ft_putnbr(tmp->elem);
 }
