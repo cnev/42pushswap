@@ -1,6 +1,6 @@
 #include "../includes/push_swap.h"
 
-t_stack			*new_stack(int val)
+static t_stack		*new_stack(int val)
 {
 	t_stack			*tmp;
 
@@ -60,24 +60,30 @@ void			pop_stack(t_stack **head)
 }
 
 
-void			stack_display(t_stack *head)
+void			stack_display(t_stack *head, char id)
 {
 	t_stack			*tmp;
 
 	tmp = head;
+	ft_putchar(id);
+	ft_putstr(": ");
 	if (!tmp)
+	{
+		ft_putchar('\n');
 		return ;
+	}
+	ft_putnbr(tmp->elem);
 	if (tmp->next == tmp)
 	{
-		ft_putnbr(tmp->elem);
+		ft_putchar('\n');
 		return ;
 	}
-	while (tmp->next != head)
+	tmp = tmp->next;
+	while (tmp != head)
 	{
 		ft_putnbr(tmp->elem);
-		ft_putchar('\n');
+		ft_putchar(' ');
 		tmp = tmp->next;
 	}
-	if (tmp != head)
-		ft_putnbr(tmp->elem);
+	ft_putchar('\n');
 }
